@@ -1,0 +1,8 @@
+.DS_Store
+._*
+.agents/
+.claude/
+CLAUDE_CODE_PROMPT 2.md
+CLAUDE_CODE_PROMPT.md
+HERO_PROMPT.md
+skills-lock.json
