@@ -614,6 +614,23 @@ const MARQUEE_SEQUENCE = [
   { key: 'marquee_30_years_expertise', kind: 'proof' }
 ];
 
+const PROJECT_CATEGORY_LABELS = {
+  en: {
+    residential: 'Residential',
+    commercial: 'Commercial',
+    institutional: 'Institutional',
+  },
+  es: {
+    residential: 'Residencial',
+    commercial: 'Comercial',
+    institutional: 'Institucional',
+  },
+};
+
+function getProjectCategoryLabel(lang, category) {
+  return (PROJECT_CATEGORY_LABELS[lang] && PROJECT_CATEGORY_LABELS[lang][category]) || category;
+}
+
 function renderMarquee(lang) {
   const marqueeTrack = document.getElementById('marquee-track');
   if (!marqueeTrack || !translations[lang]) return;
@@ -653,15 +670,18 @@ function applyLanguage(lang) {
     el.textContent = lang === 'es' ? el.dataset.bodyEs : el.dataset.bodyEn;
   });
   // Cover slide bilingual elements
-  const catMap = {
-    en: { residential: 'Residential', commercial: 'Commercial', institutional: 'Institutional' },
-    es: { residential: 'Residencial', commercial: 'Comercial', institutional: 'Institucional' },
-  };
   document.querySelectorAll('.cover-info-category[data-category]').forEach(el => {
     const cat = el.dataset.category;
-    el.textContent = (catMap[lang] && catMap[lang][cat]) ? catMap[lang][cat] : cat;
+    el.textContent = getProjectCategoryLabel(lang, cat);
+  });
+  document.querySelectorAll('.cover-mobile-category[data-category]').forEach(el => {
+    const cat = el.dataset.category;
+    el.textContent = getProjectCategoryLabel(lang, cat);
   });
   document.querySelectorAll('.cover-info-title[data-name-en]').forEach(el => {
+    el.textContent = lang === 'es' ? el.dataset.nameEs : el.dataset.nameEn;
+  });
+  document.querySelectorAll('.cover-mobile-title[data-name-en]').forEach(el => {
     el.textContent = lang === 'es' ? el.dataset.nameEs : el.dataset.nameEn;
   });
   document.querySelectorAll('.cover-meta-label[data-label-en]').forEach(el => {
@@ -949,9 +969,7 @@ function buildSlide(spread, project, lang, isFirst) {
     const cat = document.createElement('p');
     cat.className = 'cover-info-category';
     cat.dataset.category = project.category;
-    cat.textContent = lang === 'es'
-      ? (project.category === 'residential' ? 'Residencial' : 'Cultural')
-      : (project.category === 'residential' ? 'Residential' : 'Cultural');
+    cat.textContent = getProjectCategoryLabel(lang, project.category);
 
     // Title
     const titleEl = document.createElement('h3');
@@ -1015,6 +1033,46 @@ function buildSlide(spread, project, lang, isFirst) {
     img.alt = lang === 'es' ? project.name_es : project.name;
     img.loading = isFirst ? 'eager' : 'lazy';
     frame.appendChild(img);
+
+    const mobileSummary = document.createElement('div');
+    mobileSummary.className = 'cover-mobile-summary';
+
+    const mobileCategory = document.createElement('p');
+    mobileCategory.className = 'cover-mobile-category';
+    mobileCategory.dataset.category = project.category;
+    mobileCategory.textContent = getProjectCategoryLabel(lang, project.category);
+
+    const mobileTitle = document.createElement('h3');
+    mobileTitle.className = 'cover-mobile-title';
+    mobileTitle.dataset.nameEn = project.name;
+    mobileTitle.dataset.nameEs = project.name_es;
+    mobileTitle.textContent = lang === 'es' ? project.name_es : project.name;
+
+    const mobileMeta = document.createElement('p');
+    mobileMeta.className = 'cover-mobile-meta';
+
+    const mobileLocation = document.createElement('span');
+    mobileLocation.className = 'cover-mobile-location';
+    mobileLocation.textContent = project.meta?.location || '';
+    mobileMeta.appendChild(mobileLocation);
+
+    if (project.meta?.year) {
+      const mobileMetaSep = document.createElement('span');
+      mobileMetaSep.className = 'cover-mobile-meta-sep';
+      mobileMetaSep.setAttribute('aria-hidden', 'true');
+      mobileMetaSep.textContent = '•';
+      mobileMeta.appendChild(mobileMetaSep);
+
+      const mobileYear = document.createElement('span');
+      mobileYear.className = 'cover-mobile-year';
+      mobileYear.textContent = project.meta.year;
+      mobileMeta.appendChild(mobileYear);
+    }
+
+    mobileSummary.appendChild(mobileCategory);
+    mobileSummary.appendChild(mobileTitle);
+    mobileSummary.appendChild(mobileMeta);
+    frame.appendChild(mobileSummary);
     slide.appendChild(frame);
 
     // ── Right editorial text ──
