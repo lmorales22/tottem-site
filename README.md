@@ -17,12 +17,13 @@ GitHub Pages or Netlify with no build step.
 
 ## File structure
 ```
-tottem-site/
+andres-site/
 ├── index.html          # Single page app
 ├── css/style.css       # All styles
 ├── js/main.js          # Nav, parallax, lightbox, cursor, scroll reveal
 ├── images/             # 40 photos scraped from Behance
 │   └── behance_*.jpg
+├── DESIGN_BRIEF.md     # Original VP of Design brief (full spec)
 └── README.md           # This file
 ```
 

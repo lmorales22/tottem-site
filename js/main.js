@@ -259,7 +259,7 @@ const translations = {
     hero_eyebrow: "Architecture & Documentation Studio \u00b7 Medell\u00edn, Colombia",
     hero_headline: "We Design. You Build.",
     hero_sub: "Senior-level architectural design and construction documentation from Colombia. Your timezone, your codes, your standards. Thirty years of building expertise, now dedicated entirely to design.",
-    hero_cta_primary: "Start Your Project",
+    hero_cta_primary: "Request a Sample Package",
     hero_cta_secondary: "See Our Work",
     // Stats strip
     stat_years: "Years of Architecture & Construction",
@@ -284,6 +284,7 @@ const translations = {
     marquee_30_years_expertise: "30 Years of Expertise",
     // Work
     work_label: "WORK",
+    work_heading: "Selected Architectural Work",
     project_cta: "View project →",
     tag_residential: "Residential",
     tag_commercial: "Commercial",
@@ -346,25 +347,67 @@ const translations = {
     sample_feat_renders: "3D Renders",
     // Process
     process_label: "PROCESS",
-    process_heading: "How we work.",
-    process_01_title: "Discovery Call",
-    process_01_desc: "We learn about your project, scope, and timeline.",
-    process_01_time: "1–2 days",
-    process_02_title: "Scope & Proposal",
-    process_02_desc: "Detailed proposal with deliverables, timeline, and pricing.",
-    process_02_time: "3–5 days",
-    process_03_title: "Design Development",
-    process_03_desc: "Schematic design through design development with client reviews.",
-    process_03_time: "2–4 weeks",
-    process_04_title: "Documentation",
-    process_04_desc: "Production of construction documents, details, and specs.",
-    process_04_time: "3–6 weeks",
-    process_05_title: "Review & Revision",
-    process_05_desc: "Collaborative review rounds until documentation is approved.",
-    process_05_time: "1–2 weeks",
-    process_06_title: "Final Deliverables",
-    process_06_desc: "Complete package handoff, files, models, and documentation.",
-    process_06_time: "1–3 days",
+    process_heading: "From First Call to Final Delivery.",
+    process_intro: "A direct, visible workflow shaped around your standards, your reviewers, and your business day.",
+    process_sidecar_label: "Need the full workflow?",
+    process_sidecar_text: "We share the complete process map with every tailored sample package.",
+    process_deepen_cta: "Request Full Workflow",
+    process_core_label: "Shared Workflow",
+    process_core_text: "Your standards. Your reviewers. Your files.",
+    process_assurance_01_label: "Direct Communication",
+    process_assurance_01_text: "You work with the architect leading your package, not through layers of account management.",
+    process_assurance_02_label: "Your Standards",
+    process_assurance_02_text: "Templates, title blocks, code notes, sheet order, and file naming follow your system.",
+    process_assurance_03_label: "Shared Files",
+    process_assurance_03_text: "Shared folders, BIM 360 / ACC, and markup reviews keep the process clear from day one.",
+    process_you_label: "You Share",
+    process_we_label: "We Deliver",
+    process_tools_label: "Tools:",
+    process_tools_line: "Usually coordinated in Revit, AutoCAD, Bluebeam, BIM 360 / ACC, Zoom, Teams, and shared folders.",
+    process_01_title: "Discovery & Kickoff",
+    process_01_desc: "Brief, standards, deliverables, and reviewers are aligned before production begins.",
+    process_01_time: "2–5 business days",
+    process_01_you: "Brief + standards.",
+    process_01_we: "Scope + roadmap.",
+    process_01_tools: "Zoom or Teams, Drive or Dropbox, and BIM 360 / ACC when required.",
+    process_02_title: "Production & Coordination",
+    process_02_desc: "We produce in your standards, with visible progress and coordination questions raised early.",
+    process_02_time: "2–6 weeks, depending on scope",
+    process_02_you: "Milestone feedback.",
+    process_02_we: "Coordinated packages.",
+    process_02_tools: "Revit, AutoCAD, Bluebeam, BIM 360 / ACC, and shared review sets.",
+    process_03_title: "Review & Revision",
+    process_03_desc: "Comments return in structured rounds, not fragmented email chains.",
+    process_03_time: "1–2 weeks per cycle",
+    process_03_you: "Markups + direction.",
+    process_03_we: "Updated issues.",
+    process_03_tools: "Bluebeam, annotated PDFs, Zoom reviews, and transmittal logs.",
+    process_04_title: "Final Delivery & Continuity",
+    process_04_desc: "Clean issue sets, native files as agreed, and continuity after delivery.",
+    process_04_time: "1–3 business days to issue",
+    process_04_you: "Final go-ahead.",
+    process_04_we: "Issued set + follow-up.",
+    process_04_tools: "Internal QC, issue sets, email, Zoom, and the same working channels already in place.",
+    process_05_title: "QC & Final Delivery",
+    process_05_desc: "Before anything leaves our office, the set is checked for coordination, sheet logic, references, and overall clarity.",
+    process_05_time: "1–3 business days",
+    process_05_you: "Final go-ahead for issue or submission requirements from your team.",
+    process_05_we: "Issued PDFs, native files as agreed, and a clean transmittal of delivered items.",
+    process_05_tools: "Internal peer review, PDF issue sets, native file export, and delivery log.",
+    process_06_title: "Post-Delivery Support",
+    process_06_desc: "We stay available for permit comments, addenda, clarification requests, and the next phase of work. The goal is continuity, not a handoff into silence.",
+    process_06_time: "Ongoing",
+    process_06_you: "Review comments, bidder questions, or field clarifications after issue.",
+    process_06_we: "Fast follow-up revisions, response support, and continuity with the same team already onboarded.",
+    process_06_tools: "Email, Zoom, Bluebeam, and the same working channels already in place.",
+    process_timeline_label: "Typical working ranges",
+    process_timeline_note: "Timeframes vary by scope, consultants, and jurisdiction.",
+    process_timeline_01_label: "Targeted support",
+    process_timeline_01_value: "2–4 weeks",
+    process_timeline_02_label: "Permit-ready sets",
+    process_timeline_02_value: "4–8 weeks",
+    process_timeline_03_label: "Larger scopes",
+    process_timeline_03_value: "Custom roadmap",
     // Studio
     studio_label: "STUDIO",
     studio_heading: "30 Years of Building. Now We Only Design.",
@@ -376,9 +419,9 @@ const translations = {
     cred_pricing: "40-60% Cost Savings",
     cred_codes: "IBC / FBC Compliant",
     // Final CTA
-    finalcta_heading: "Your Next Project Deserves Better Design Support",
-    finalcta_text: "Let's talk about your pipeline, your standards, and how Tottem can become the design arm you've been looking for. No pitch deck. Just a straight conversation.",
-    finalcta_btn: "Schedule a Free Call",
+    finalcta_heading: "Direct communication. No black box.",
+    finalcta_text: "If the fit feels right, the next step is simple. Use the contact form below and we will respond directly from our team.",
+    finalcta_btn: "Go to Contact",
     // Contact
     contact_label: "CONTACT",
     contact_heading: "Let's Talk About Your Next Project",
@@ -401,6 +444,9 @@ const translations = {
     form_service_docs: "Construction Documentation",
     form_service_consulting: "Design Consulting",
     form_service_unsure: "Not Sure Yet",
+    sample_service_hint: "Select up to three services.",
+    sample_service_required: "Please choose at least one service.",
+    sample_service_limit: "Please choose no more than three services.",
     form_type_placeholder: "Project Type",
     form_type_residential: "Residential",
     form_type_commercial: "Commercial",
@@ -444,7 +490,7 @@ const translations = {
     hero_eyebrow: "Estudio de Arquitectura y Documentaci\u00f3n \u00b7 Medell\u00edn, Colombia",
     hero_headline: "Nosotros Diseñamos. Usted Construye.",
     hero_sub: "Dise\u00f1o arquitect\u00f3nico y documentaci\u00f3n de construcci\u00f3n de nivel senior desde Colombia. Su zona horaria, sus c\u00f3digos, sus est\u00e1ndares. Treinta a\u00f1os de experiencia en construcci\u00f3n, ahora dedicados completamente al dise\u00f1o.",
-    hero_cta_primary: "Inicie Su Proyecto",
+    hero_cta_primary: "Solicite un Paquete Muestra",
     hero_cta_secondary: "Ver Nuestro Trabajo",
     stat_years: "A\u00f1os de Arquitectura y Construcci\u00f3n",
     stat_projects: "Proyectos Dise\u00f1ados y Documentados",
@@ -466,6 +512,7 @@ const translations = {
     marquee_bogota_colombia: "Medellín, Colombia",
     marquee_30_years_expertise: "30 Años de Experiencia",
     work_label: "PROYECTOS",
+    work_heading: "Proyectos Arquitectónicos Seleccionados",
     project_cta: "Ver proyecto →",
     tag_residential: "Residencial",
     tag_commercial: "Comercial",
@@ -524,25 +571,67 @@ const translations = {
     sample_feat_details: "Detalles",
     sample_feat_renders: "Renders 3D",
     process_label: "PROCESO",
-    process_heading: "Cómo trabajamos.",
-    process_01_title: "Llamada Inicial",
-    process_01_desc: "Conocemos su proyecto, alcance y cronograma.",
-    process_01_time: "1–2 días",
-    process_02_title: "Alcance y Propuesta",
-    process_02_desc: "Propuesta detallada con entregables, cronograma y precios.",
-    process_02_time: "3–5 días",
-    process_03_title: "Desarrollo de Diseño",
-    process_03_desc: "Diseño esquemático hasta desarrollo con revisiones del cliente.",
-    process_03_time: "2–4 semanas",
-    process_04_title: "Documentación",
-    process_04_desc: "Producción de documentos de construcción, detalles y especificaciones.",
-    process_04_time: "3–6 semanas",
-    process_05_title: "Revisión y Corrección",
-    process_05_desc: "Rondas de revisión colaborativa hasta aprobación de la documentación.",
-    process_05_time: "1–2 semanas",
-    process_06_title: "Entregables Finales",
-    process_06_desc: "Entrega completa del paquete, archivos, modelos y documentación.",
-    process_06_time: "1–3 días",
+    process_heading: "De la Primera Llamada a la Entrega Final.",
+    process_intro: "Un flujo directo y visible, organizado alrededor de sus estándares, sus revisores y su jornada laboral.",
+    process_sidecar_label: "¿Necesita el flujo completo?",
+    process_sidecar_text: "Compartimos el mapa completo del proceso con cada paquete muestra personalizado.",
+    process_deepen_cta: "Solicite el Flujo Completo",
+    process_core_label: "Flujo Compartido",
+    process_core_text: "Sus estándares. Sus revisores. Sus archivos.",
+    process_assurance_01_label: "Comunicación Directa",
+    process_assurance_01_text: "Usted trabaja con el arquitecto que lidera su paquete, no a través de varias capas de intermediación.",
+    process_assurance_02_label: "Sus Estándares",
+    process_assurance_02_text: "Plantillas, carátulas, notas de código, orden de planos y nomenclatura de archivos siguen su sistema.",
+    process_assurance_03_label: "Archivos Compartidos",
+    process_assurance_03_text: "Carpetas compartidas, BIM 360 / ACC y rondas de revisión mantienen el proceso claro desde el primer día.",
+    process_you_label: "Usted Comparte",
+    process_we_label: "Nosotros Entregamos",
+    process_tools_label: "Herramientas:",
+    process_tools_line: "Normalmente coordinamos en Revit, AutoCAD, Bluebeam, BIM 360 / ACC, Zoom, Teams y carpetas compartidas.",
+    process_01_title: "Descubrimiento y Arranque",
+    process_01_desc: "Alineamos brief, estándares, entregables y revisores antes de iniciar la producción.",
+    process_01_time: "2–5 días hábiles",
+    process_01_you: "Brief + estándares.",
+    process_01_we: "Alcance + hoja de ruta.",
+    process_01_tools: "Zoom o Teams, Drive o Dropbox, y BIM 360 / ACC cuando se requiere.",
+    process_02_title: "Producción y Coordinación",
+    process_02_desc: "Producimos bajo sus estándares, con avance visible y dudas de coordinación elevadas a tiempo.",
+    process_02_time: "2–6 semanas, según el alcance",
+    process_02_you: "Retroalimentación por hitos.",
+    process_02_we: "Paquetes coordinados.",
+    process_02_tools: "Revit, AutoCAD, Bluebeam, BIM 360 / ACC y juegos compartidos de revisión.",
+    process_03_title: "Revisión y Correcciones",
+    process_03_desc: "Los comentarios regresan en rondas claras, no perdidos en cadenas de correo.",
+    process_03_time: "1–2 semanas por ciclo",
+    process_03_you: "Marcaciones + dirección.",
+    process_03_we: "Juegos actualizados.",
+    process_03_tools: "Bluebeam, PDFs anotados, revisiones por Zoom y registros de transmittal.",
+    process_04_title: "Entrega Final y Continuidad",
+    process_04_desc: "Juegos limpios de emisión, archivos nativos según lo acordado y continuidad después de la entrega.",
+    process_04_time: "1–3 días hábiles para emitir",
+    process_04_you: "Aprobación final.",
+    process_04_we: "Emisión + seguimiento.",
+    process_04_tools: "Control interno de calidad, juegos de emisión, correo, Zoom y los mismos canales de trabajo ya establecidos.",
+    process_05_title: "Control de Calidad y Entrega Final",
+    process_05_desc: "Antes de que cualquier cosa salga de nuestra oficina, el set se revisa por coordinación, lógica de planos, referencias y claridad general.",
+    process_05_time: "1–3 días hábiles",
+    process_05_you: "La aprobación final para emitir o los requisitos de entrega de su equipo.",
+    process_05_we: "PDFs emitidos, archivos nativos según lo acordado y un transmittal limpio de los entregables enviados.",
+    process_05_tools: "Revisión interna por pares, juegos de emisión en PDF, exportación de archivos nativos y registro de entrega.",
+    process_06_title: "Soporte Posterior a la Entrega",
+    process_06_desc: "Seguimos disponibles para comentarios de permisos, adendas, aclaraciones y la siguiente fase del trabajo. La meta es continuidad, no una entrega seguida de silencio.",
+    process_06_time: "Continuo",
+    process_06_you: "Comentarios de revisión, preguntas de oferentes o aclaraciones de campo después de la emisión.",
+    process_06_we: "Correcciones de seguimiento, soporte de respuesta y continuidad con el mismo equipo ya incorporado.",
+    process_06_tools: "Correo electrónico, Zoom, Bluebeam y los mismos canales de trabajo ya establecidos.",
+    process_timeline_label: "Rangos habituales de trabajo",
+    process_timeline_note: "Los tiempos varían según alcance, consultores y jurisdicción.",
+    process_timeline_01_label: "Soporte puntual",
+    process_timeline_01_value: "2–4 semanas",
+    process_timeline_02_label: "Juegos listos para permisos",
+    process_timeline_02_value: "4–8 semanas",
+    process_timeline_03_label: "Alcances mayores",
+    process_timeline_03_value: "Hoja de ruta personalizada",
     studio_label: "ESTUDIO",
     studio_heading: "30 A\u00f1os Construyendo. Ahora Solo Dise\u00f1amos.",
     studio_text: "Durante tres d\u00e9cadas, Tottem Arquitectura lo hizo todo. Dise\u00f1amos edificios, los documentamos y luego los construimos. Torres residenciales en Medell\u00edn. Complejos comerciales en toda Colombia. Luego tomamos la decisi\u00f3n m\u00e1s grande de nuestra pr\u00e1ctica: dejamos de construir. No porque no pudi\u00e9ramos. Porque nos dimos cuenta de que nuestro mayor valor era nuestra capacidad de producir dise\u00f1o y documentaci\u00f3n que anticipaba la construcci\u00f3n. Planos que resolv\u00edan problemas antes de llegar al campo.",
@@ -552,9 +641,9 @@ const translations = {
     cred_bilingual: "Equipo Biling\u00fce (EN/ES)",
     cred_pricing: "40-60% de Ahorro",
     cred_codes: "Cumplimiento IBC / FBC",
-    finalcta_heading: "Su Pr\u00f3ximo Proyecto Merece Mejor Soporte de Dise\u00f1o",
-    finalcta_text: "Hablemos de su pipeline, sus est\u00e1ndares, y c\u00f3mo Tottem puede convertirse en el brazo de dise\u00f1o que ha estado buscando. Sin presentaciones. Solo una conversaci\u00f3n directa.",
-    finalcta_btn: "Agendar una Llamada Gratuita",
+    finalcta_heading: "Comunicaci\u00f3n directa. Sin caja negra.",
+    finalcta_text: "Si la forma de trabajar le parece alineada, el siguiente paso es simple. Use el formulario de contacto a continuaci\u00f3n y le responderemos directamente desde nuestro equipo.",
+    finalcta_btn: "Ir a Contacto",
     contact_label: "CONTACTO",
     contact_heading: "Hablemos de Su Pr\u00f3ximo Proyecto",
     contact_subline: "Ya sea que tenga un proyecto listo o est\u00e9 explorando c\u00f3mo funciona el outsourcing arquitect\u00f3nico nearshore, nos gustar\u00eda escucharle. Sin discurso de ventas. Solo una conversaci\u00f3n directa entre arquitectos.",
@@ -576,6 +665,9 @@ const translations = {
     form_service_docs: "Documentaci\u00f3n de Construcci\u00f3n",
     form_service_consulting: "Consultor\u00eda de Dise\u00f1o",
     form_service_unsure: "A\u00fan No Estoy Seguro",
+    sample_service_hint: "Seleccione hasta tres servicios.",
+    sample_service_required: "Por favor seleccione al menos un servicio.",
+    sample_service_limit: "Por favor seleccione no m\u00e1s de tres servicios.",
     form_type_placeholder: "Tipo de Proyecto",
     form_type_residential: "Residencial",
     form_type_commercial: "Comercial",
@@ -627,8 +719,43 @@ const PROJECT_CATEGORY_LABELS = {
   },
 };
 
+const SEO_CONTENT = {
+  en: {
+    title: 'Nearshore Architectural Design & Construction Documentation | Tottem',
+    description: 'Nearshore architectural design, construction documentation, and consulting for U.S. architecture firms, developers, and contractors. Based in Medellín, same time zone.',
+    ogLocale: 'en_US',
+  },
+  es: {
+    title: 'Diseño Arquitectónico y Documentación Constructiva Nearshore | Tottem',
+    description: 'Diseño arquitectónico, documentación constructiva y consultoría para firmas de arquitectura, desarrolladores y contratistas en Estados Unidos. Basados en Medellín, misma zona horaria.',
+    ogLocale: 'es_CO',
+  },
+};
+
 function getProjectCategoryLabel(lang, category) {
   return (PROJECT_CATEGORY_LABELS[lang] && PROJECT_CATEGORY_LABELS[lang][category]) || category;
+}
+
+function applySeoLanguage(lang) {
+  const seo = SEO_CONTENT[lang] || SEO_CONTENT.en;
+  document.documentElement.lang = lang === 'es' ? 'es' : 'en';
+  document.title = seo.title;
+
+  const updates = [
+    ['meta[name="description"]', seo.description],
+    ['meta[property="og:title"]', seo.title],
+    ['meta[property="og:description"]', seo.description],
+    ['meta[property="og:locale"]', seo.ogLocale],
+    ['meta[name="twitter:title"]', seo.title],
+    ['meta[name="twitter:description"]', seo.description],
+  ];
+
+  updates.forEach(([selector, value]) => {
+    const el = document.querySelector(selector);
+    if (el) {
+      el.setAttribute('content', value);
+    }
+  });
 }
 
 function renderMarquee(lang) {
@@ -649,6 +776,7 @@ function renderMarquee(lang) {
 }
 
 function applyLanguage(lang) {
+  applySeoLanguage(lang);
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key]) {
@@ -706,6 +834,17 @@ function applyLanguage(lang) {
       el.placeholder = translations[lang][key];
     }
   });
+  document.querySelectorAll('.sample-service-help').forEach(el => {
+    if (el.dataset.helpEn) {
+      el.textContent = lang === 'es' ? el.dataset.helpEs : el.dataset.helpEn;
+      return;
+    }
+
+    const key = el.getAttribute('data-i18n');
+    if (key && translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
   // Select option translations
   document.querySelectorAll('select option[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
@@ -715,7 +854,7 @@ function applyLanguage(lang) {
   });
   renderMarquee(lang);
   // Update all lang-opt buttons (nav pill + mobile pill)
-  document.querySelectorAll('.lang-opt, .lang-badge-opt').forEach(btn => {
+  document.querySelectorAll('.lang-opt').forEach(btn => {
     btn.classList.toggle('is-active', btn.dataset.lang === lang);
   });
   localStorage.setItem('tottem-lang', lang);
@@ -732,6 +871,46 @@ const initSampleGateForm = () => {
   const sampleCard = sampleForm.querySelector('.sample-gate-card');
   const submitButton = sampleForm.querySelector('.sample-cta');
   const errorEl = sampleForm.querySelector('.sample-gate-error');
+  const serviceInputs = Array.from(sampleForm.querySelectorAll('input[name="service_needed"]'));
+  const serviceErrorEl = sampleForm.querySelector('.sample-service-error');
+
+  const setSampleServiceError = (message = '') => {
+    if (!serviceErrorEl) return;
+    serviceErrorEl.textContent = message;
+  };
+
+  const getSelectedServices = () => serviceInputs.filter(input => input.checked);
+
+  const validateSampleServices = () => {
+    const selected = getSelectedServices();
+
+    if (selected.length === 0) {
+      setSampleServiceError(translations[currentLang]?.sample_service_required || 'Please choose at least one service.');
+      return false;
+    }
+
+    if (selected.length > 3) {
+      setSampleServiceError(translations[currentLang]?.sample_service_limit || 'Please choose no more than three services.');
+      return false;
+    }
+
+    setSampleServiceError('');
+    return true;
+  };
+
+  serviceInputs.forEach(input => {
+    input.addEventListener('change', () => {
+      const selected = getSelectedServices();
+
+      if (selected.length > 3) {
+        input.checked = false;
+        setSampleServiceError(translations[currentLang]?.sample_service_limit || 'Please choose no more than three services.');
+        return;
+      }
+
+      setSampleServiceError('');
+    });
+  });
 
   sampleForm.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -740,12 +919,26 @@ const initSampleGateForm = () => {
       return;
     }
 
+    if (!validateSampleServices()) {
+      serviceInputs[0]?.focus();
+      return;
+    }
+
+    const selectedServices = getSelectedServices();
+    const selectedServiceValues = selectedServices.map(input => input.value);
+    const selectedServiceLabels = selectedServices.map(input => {
+      const labelKey = input.dataset.serviceLabelKey;
+      return (labelKey && translations[currentLang]?.[labelKey]) || input.value;
+    });
+
     const payload = {
       requestType: 'sample_package',
       fullName: sampleForm.querySelector('#sample-name')?.value.trim() || '',
       email: sampleForm.querySelector('#sample-email')?.value.trim() || '',
       company: sampleForm.querySelector('#sample-company')?.value.trim() || '',
-      serviceNeeded: sampleForm.querySelector('#sample-service')?.value || '',
+      serviceNeeded: selectedServiceValues.join(', '),
+      servicesNeeded: selectedServiceValues,
+      serviceLabels: selectedServiceLabels,
       language: currentLang,
       submittedAt: new Date().toISOString()
     };
@@ -757,6 +950,7 @@ const initSampleGateForm = () => {
     if (errorEl) {
       errorEl.textContent = translations[currentLang]?.sample_error || '';
     }
+    setSampleServiceError('');
 
     if (submitButton) {
       submitButton.disabled = true;
@@ -783,6 +977,7 @@ const initSampleGateForm = () => {
       }
 
       sampleForm.reset();
+      setSampleServiceError('');
       sampleCard?.classList.add('is-submitted');
     } catch (error) {
       sampleCard?.classList.add('is-error');
@@ -800,8 +995,8 @@ const initSampleGateForm = () => {
 
 initSampleGateForm();
 
-// Lang option click handlers (nav + mobile + badge)
-document.querySelectorAll('.lang-opt, .lang-badge-opt').forEach(btn => {
+// Lang option click handlers (nav + mobile)
+document.querySelectorAll('.lang-opt').forEach(btn => {
   btn.addEventListener('click', () => {
     const newLang = btn.dataset.lang;
     if (newLang !== currentLang) {
@@ -810,14 +1005,6 @@ document.querySelectorAll('.lang-opt, .lang-badge-opt').forEach(btn => {
     }
   });
 });
-
-// Fixed badge: show after scrolling past the nav, hide when back at top
-const langBadge = document.getElementById('lang-badge');
-if (langBadge) {
-  window.addEventListener('scroll', () => {
-    langBadge.classList.toggle('is-visible', window.scrollY > 120);
-  }, { passive: true });
-}
 
 // ── Work Filters ──
 document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -1030,7 +1217,9 @@ function buildSlide(spread, project, lang, isFirst) {
     frame.className = 'project-slide-frame';
     const img = document.createElement('img');
     img.src = spread.image;
-    img.alt = lang === 'es' ? project.name_es : project.name;
+    img.alt = lang === 'es'
+      ? `${project.name_es}, proyecto arquitectónico en ${project.meta?.location || 'Colombia'}`
+      : `${project.name}, architectural project in ${project.meta?.location || 'Colombia'}`;
     img.loading = isFirst ? 'eager' : 'lazy';
     frame.appendChild(img);
 
@@ -1095,7 +1284,9 @@ function buildSlide(spread, project, lang, isFirst) {
     frame.className = 'project-slide-frame';
     const img = document.createElement('img');
     img.src = spread.image;
-    img.alt = '';
+    img.alt = lang === 'es'
+      ? `${project.name_es}: ${spread.caption_es || spread.pull_es || 'documentación y arquitectura'}`
+      : `${project.name}: ${spread.caption_en || spread.pull_en || 'architecture and documentation'}`;
     img.loading = 'lazy';
     frame.appendChild(img);
     slide.appendChild(frame);
@@ -1120,7 +1311,9 @@ function buildSlide(spread, project, lang, isFirst) {
     visual.className = 'project-slide-visual';
     const img = document.createElement('img');
     img.src = spread.image;
-    img.alt = '';
+    img.alt = lang === 'es'
+      ? `${project.name_es}: ${spread.pull_es || 'detalle arquitectonico'}`
+      : `${project.name}: ${spread.pull_en || 'architectural detail'}`;
     img.loading = 'lazy';
     visual.appendChild(img);
     slide.appendChild(visual);
