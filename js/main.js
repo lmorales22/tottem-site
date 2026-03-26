@@ -101,16 +101,16 @@ revealGroups.forEach((group) => {
   const children = group.querySelectorAll('[data-reveal]');
   children.forEach((child, index) => {
     child.classList.add('reveal');
-    child.style.setProperty('--delay', `${index * 100}ms`);
+    child.style.setProperty('--delay', `${index * 70}ms`);
 
     if (group.closest('.why-us') || group.closest('.approach')) {
-      child.style.transform = 'translateY(30px)';
+      child.style.transform = 'translateY(18px)';
     }
   });
 });
 
 standaloneReveals.forEach((item, index) => {
-  item.style.setProperty('--delay', `${(index % 3) * 100}ms`);
+  item.style.setProperty('--delay', `${(index % 3) * 70}ms`);
 });
 
 const revealItems = document.querySelectorAll('.reveal');
@@ -125,7 +125,8 @@ const revealObserver = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.3
+    threshold: 0.12,
+    rootMargin: '0px 0px -8% 0px'
   }
 );
 
@@ -252,6 +253,7 @@ const translations = {
     nav_contact: "Contact",
     // Filters
     filter_all: "All",
+    filter_featured: "Featured",
     filter_residential: "Residential",
     filter_commercial: "Commercial",
     filter_institutional: "Institutional",
@@ -484,6 +486,7 @@ const translations = {
     nav_studio: "Estudio",
     nav_contact: "Contacto",
     filter_all: "Todos",
+    filter_featured: "Destacados",
     filter_residential: "Residencial",
     filter_commercial: "Comercial",
     filter_institutional: "Institucional",
@@ -1007,20 +1010,27 @@ document.querySelectorAll('.lang-opt').forEach(btn => {
 });
 
 // ── Work Filters ──
-document.querySelectorAll('.filter-btn').forEach(btn => {
+const applyProjectFilter = (filter) => {
+  document.querySelectorAll('.filter-btn').forEach((button) => {
+    button.classList.toggle('is-active', button.dataset.filter === filter);
+  });
+
+  document.querySelectorAll('.project-item').forEach((card) => {
+    const isVisible = filter === 'featured'
+      ? card.dataset.featured === 'true'
+      : card.dataset.category === filter;
+
+    card.classList.toggle('is-hidden', !isVisible);
+  });
+};
+
+document.querySelectorAll('.filter-btn').forEach((btn) => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
-    btn.classList.add('is-active');
-    const filter = btn.dataset.filter;
-    document.querySelectorAll('.project-item').forEach(card => {
-      if (filter === 'all' || card.dataset.category === filter) {
-        card.classList.remove('is-hidden');
-      } else {
-        card.classList.add('is-hidden');
-      }
-    });
+    applyProjectFilter(btn.dataset.filter);
   });
 });
+
+applyProjectFilter('featured');
 
 // ── Inline Project Slides ──
 const PROJECTS_DATA = [
@@ -1450,8 +1460,8 @@ PROJECTS_DATA.forEach((project) => {
   );
   textTargets.forEach((el, i) => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(18px)';
-    el.style.transition = `opacity 800ms cubic-bezier(0.16, 1, 0.3, 1) ${i * 80}ms, transform 800ms cubic-bezier(0.16, 1, 0.3, 1) ${i * 80}ms`;
+    el.style.transform = 'translateY(10px)';
+    el.style.transition = `opacity 420ms cubic-bezier(0.16, 1, 0.3, 1) ${i * 35}ms, transform 420ms cubic-bezier(0.16, 1, 0.3, 1) ${i * 35}ms`;
   });
 
   const cardObserver = new IntersectionObserver((entries) => {
@@ -1464,7 +1474,7 @@ PROJECTS_DATA.forEach((project) => {
         cardObserver.unobserve(card);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.05, rootMargin: '0px 0px -6% 0px' });
 
   cardObserver.observe(card);
 

@@ -927,7 +927,7 @@ section[id] {
 }
 
 .projects {
-  padding: 72px 0 0;
+  padding: 56px 0 0;
 }
 
 .section-label {
@@ -959,7 +959,7 @@ section[id] {
 }
 
 .projects-header {
-  padding: 0 5vw 2.25rem;
+  padding: 0 5vw 1.7rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -980,12 +980,12 @@ section[id] {
 .projects-list {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
 }
 
 .project-item {
   position: relative;
-  height: clamp(36rem, 72vh, 44rem);
+  height: clamp(32rem, 64vh, 39rem);
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -998,8 +998,8 @@ section[id] {
 /* ── Inline Project Slides ── */
 /* peek = clamp(60px, 15vw, 240px) — large enough to clear the 5vw frame margin */
 .project-slide {
-  flex: 0 0 calc(100% - clamp(88px, 18vw, 260px));
-  width: calc(100% - clamp(88px, 18vw, 260px));
+  flex: 0 0 calc(100% - clamp(72px, 15vw, 220px));
+  width: calc(100% - clamp(72px, 15vw, 220px));
   height: 100%;
   flex-shrink: 0;
   position: relative;
@@ -1013,7 +1013,7 @@ section[id] {
 
 .project-slide--cover {
   display: grid;
-  grid-template-columns: 220px 1fr 240px;
+  grid-template-columns: 210px 1fr 220px;
   background: var(--color-bg);
 }
 
@@ -1033,7 +1033,7 @@ section[id] {
 .cover-info {
   display: flex;
   flex-direction: column;
-  padding: 2.6rem 1.8rem 2.2rem;
+  padding: 2.2rem 1.6rem 1.9rem;
   overflow: hidden;
   position: relative;
 }
@@ -1120,7 +1120,7 @@ section[id] {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3rem 2rem;
+  padding: 2.35rem 1.55rem;
   overflow-y: auto;
 }
 
@@ -1143,7 +1143,7 @@ section[id] {
   flex: 1;
   position: relative;
   overflow: hidden;
-  margin: 4.25vh 6vw 0;
+  margin: 3.25vh 5vw 0;
   min-height: 0;
 }
 
@@ -1165,7 +1165,7 @@ section[id] {
 
 .project-slide-caption-bar {
   flex-shrink: 0;
-  padding: 0 6vw 2.2rem;
+  padding: 0 5vw 1.6rem;
   display: flex;
   align-items: flex-start;
   gap: 2rem;
@@ -1241,7 +1241,7 @@ section[id] {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3.2rem 4vw 3.2rem 2.5vw;   /* 3vw inner gutter to image, 5vw outer breathing room */
+  padding: 2.5rem 3.25vw 2.5rem 2.15vw;
   background: var(--color-bg);
   overflow-y: auto;
   border-left: 1px solid rgba(245, 240, 232, 0.06);
@@ -1260,7 +1260,7 @@ section[id] {
 
 .project-slide-pull {
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 4.2vw, 5rem);
+  font-size: clamp(1.85rem, 3.8vw, 4.35rem);
   font-weight: 300;
   line-height: 1.0;
   letter-spacing: -0.02em;
@@ -1270,7 +1270,7 @@ section[id] {
 
 .project-slide-body {
   font-family: var(--font-brand);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 300;
   line-height: 1.85;
   color: rgba(245, 240, 232, 0.46);
@@ -1687,13 +1687,14 @@ section[id] {
 
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(14px);
+  will-change: opacity, transform;
 }
 
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 700ms ease, transform 700ms ease;
+  transition: opacity 360ms cubic-bezier(0.22, 1, 0.36, 1), transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--delay, 0ms);
 }
 
@@ -2063,7 +2064,7 @@ body.custom-cursor-enabled .cursor {
   }
 
   .project-item {
-    height: clamp(44rem, 92svh, 52rem);
+    height: clamp(38rem, 84svh, 46rem);
   }
 
   .project-slide--cover {
@@ -2224,7 +2225,7 @@ body.custom-cursor-enabled .cursor {
 
 @media (min-width: 600px) and (max-width: 768px) {
   .project-item {
-    height: 65vh;
+    height: 60vh;
   }
 }
 
@@ -2425,7 +2426,7 @@ body.custom-cursor-enabled .cursor {
   display: flex;
   gap: 1rem;
   padding: 0 6vw;
-  margin-bottom: 2rem;
+  margin-bottom: 1.35rem;
 }
 
 .filter-btn {
@@ -3790,7 +3791,7 @@ body.custom-cursor-enabled .cursor {
   inset: 0;
   background:
     linear-gradient(180deg, rgba(17, 29, 40, 0.16), rgba(17, 29, 40, 0.36)),
-    url("../images/services-blueprint-bg.png") center/cover no-repeat;
+    url("../images/services-blueprint-bg.jpg") center/cover no-repeat;
   opacity: 0.72;
   pointer-events: none;
 }
