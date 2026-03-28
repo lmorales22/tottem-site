@@ -3778,11 +3778,12 @@ body.custom-cursor-enabled .cursor {
 .services-section {
   position: relative;
   background:
-    radial-gradient(circle at top center, rgba(122, 164, 205, 0.18), transparent 28%),
-    linear-gradient(180deg, #1f3547 0%, #182a39 100%);
+    radial-gradient(circle at 18% 10%, rgba(255, 251, 245, 0.84), transparent 24%),
+    radial-gradient(circle at 82% 14%, rgba(244, 235, 221, 0.56), transparent 30%),
+    linear-gradient(180deg, #ebe2d7 0%, #e1d5c8 100%);
   padding: 0;
   overflow: hidden;
-  color: #f5f0e8;
+  color: #211d1a;
 }
 
 .services-section::before {
@@ -3790,9 +3791,11 @@ body.custom-cursor-enabled .cursor {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(17, 29, 40, 0.16), rgba(17, 29, 40, 0.36)),
-    url("../images/services-blueprint-bg.jpg") center/cover no-repeat;
-  opacity: 0.72;
+    linear-gradient(to right, rgba(48, 41, 35, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(48, 41, 35, 0.045) 1px, transparent 1px),
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.26), transparent 34%);
+  background-size: 46px 46px, 46px 46px, auto;
+  opacity: 0.5;
   pointer-events: none;
 }
 
@@ -3808,14 +3811,14 @@ body.custom-cursor-enabled .cursor {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at top center, rgba(197, 223, 247, 0.06), transparent 26%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 18%);
-  opacity: 0.9;
+    radial-gradient(circle at top center, rgba(255, 255, 255, 0.22), transparent 22%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 18%);
+  opacity: 0.78;
   pointer-events: none;
 }
 
 .services-section .section-label {
-  color: rgba(236, 242, 248, 0.82);
+  color: rgba(44, 38, 34, 0.62);
 }
 
 .services-header {
@@ -3843,7 +3846,7 @@ body.custom-cursor-enabled .cursor {
   font-size: clamp(3.2rem, 6vw, 6.15rem);
   line-height: 0.94;
   letter-spacing: -0.04em;
-  color: #f7f1e7;
+  color: #201c18;
 }
 
 .services-board-grid {
@@ -3863,11 +3866,11 @@ body.custom-cursor-enabled .cursor {
   display: flex;
   flex-direction: column;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.86) 0%, rgba(244, 235, 222, 0.98) 100%);
+    linear-gradient(180deg, rgba(252, 248, 242, 0.98) 0%, rgba(239, 230, 219, 0.98) 100%);
   color: #1e1c1b;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(126, 108, 90, 0.18);
   border-radius: 26px;
-  box-shadow: 0 26px 68px rgba(5, 10, 15, 0.22);
+  box-shadow: 0 24px 52px rgba(53, 43, 34, 0.14);
   overflow: hidden;
   transform: translateY(14px);
   transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
@@ -3875,7 +3878,7 @@ body.custom-cursor-enabled .cursor {
 
 .service-board:hover {
   transform: translateY(6px);
-  box-shadow: 0 28px 68px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 28px 56px rgba(53, 43, 34, 0.18);
 }
 
 .service-board::before {
@@ -3883,10 +3886,10 @@ body.custom-cursor-enabled .cursor {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(30, 28, 27, 0.028) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(30, 28, 27, 0.028) 1px, transparent 1px);
-  background-size: 30px 30px;
-  opacity: 0.4;
+    linear-gradient(rgba(42, 35, 30, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42, 35, 30, 0.018) 1px, transparent 1px);
+  background-size: 34px 34px;
+  opacity: 0.26;
   pointer-events: none;
 }
 
@@ -3898,35 +3901,35 @@ body.custom-cursor-enabled .cursor {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(4.6rem, 8.8vw, 8.2rem);
   line-height: 0.8;
-  color: rgba(30, 28, 27, 0.08);
+  color: rgba(39, 32, 28, 0.07);
   pointer-events: none;
 }
 
 .service-board--featured {
   background:
-    radial-gradient(circle at top left, rgba(157, 194, 228, 0.12), transparent 42%),
-    linear-gradient(180deg, #243f57 0%, #1b3044 100%);
+    radial-gradient(circle at top left, rgba(201, 176, 133, 0.14), transparent 44%),
+    linear-gradient(180deg, #312a24 0%, #231f1b 100%);
   color: #f5f0e8;
   min-height: 620px;
   transform: translateY(-6px);
-  border-color: rgba(211, 230, 248, 0.24);
-  box-shadow: 0 40px 94px rgba(4, 9, 14, 0.36);
+  border-color: rgba(198, 172, 132, 0.22);
+  box-shadow: 0 34px 88px rgba(33, 26, 21, 0.28);
 }
 
 .service-board--featured:hover {
   transform: translateY(-10px);
-  box-shadow: 0 46px 104px rgba(4, 9, 14, 0.42);
+  box-shadow: 0 40px 96px rgba(33, 26, 21, 0.32);
 }
 
 .service-board--featured::before {
   background-image:
-    linear-gradient(rgba(211, 230, 248, 0.075) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(211, 230, 248, 0.075) 1px, transparent 1px);
-  opacity: 0.42;
+    linear-gradient(rgba(240, 224, 198, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(240, 224, 198, 0.045) 1px, transparent 1px);
+  opacity: 0.3;
 }
 
 .service-board--featured::after {
-  color: rgba(245, 240, 232, 0.1);
+  color: rgba(245, 240, 232, 0.08);
   bottom: 1rem;
 }
 
@@ -3939,22 +3942,22 @@ body.custom-cursor-enabled .cursor {
   align-items: baseline;
   padding-bottom: 0.9rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid rgba(30, 28, 27, 0.12);
+  border-bottom: 1px solid rgba(53, 43, 34, 0.14);
 }
 
 .service-board--featured .service-board-top {
-  border-bottom-color: rgba(245, 240, 232, 0.12);
+  border-bottom-color: rgba(245, 240, 232, 0.11);
 }
 
 .service-board-index {
   font-family: "Cormorant Garamond", serif;
   font-size: 0.82rem;
   letter-spacing: 0.16em;
-  color: rgba(30, 28, 27, 0.44);
+  color: rgba(49, 40, 34, 0.46);
 }
 
 .service-board--featured .service-board-index {
-  color: rgba(245, 240, 232, 0.52);
+  color: rgba(245, 240, 232, 0.48);
 }
 
 .service-board-title {
@@ -3979,7 +3982,7 @@ body.custom-cursor-enabled .cursor {
   font-size: clamp(1.9rem, 2.25vw, 2.5rem);
   line-height: 0.97;
   letter-spacing: -0.028em;
-  color: #1e1c1b;
+  color: #221e1a;
   margin: 0 0 1rem;
   max-width: 12ch;
 }
@@ -3997,7 +4000,7 @@ body.custom-cursor-enabled .cursor {
   max-width: 34ch;
   font-size: 0.9rem;
   line-height: 1.68;
-  color: rgba(30, 28, 27, 0.72);
+  color: rgba(45, 37, 31, 0.72);
 }
 
 .service-board--featured .service-board-body {
@@ -4016,7 +4019,7 @@ body.custom-cursor-enabled .cursor {
   display: grid;
   gap: 0.72rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(30, 28, 27, 0.12);
+  border-top: 1px solid rgba(53, 43, 34, 0.14);
 }
 
 .service-board--featured .service-board-deliverables {
@@ -4032,7 +4035,7 @@ body.custom-cursor-enabled .cursor {
   font-size: 0.79rem;
   line-height: 1.42;
   letter-spacing: 0.02em;
-  color: rgba(30, 28, 27, 0.72);
+  color: rgba(45, 37, 31, 0.72);
 }
 
 .service-board-deliverables li::before {
@@ -4043,8 +4046,8 @@ body.custom-cursor-enabled .cursor {
   width: 1.45rem;
   height: 1.45rem;
   border-radius: 999px;
-  border: 1px solid rgba(46, 110, 173, 0.7);
-  color: #2e6ead;
+  border: 1px solid rgba(112, 139, 99, 0.68);
+  color: #708b63;
   display: grid;
   place-items: center;
   font-size: 0.82rem;
@@ -4057,8 +4060,8 @@ body.custom-cursor-enabled .cursor {
 }
 
 .service-board--featured .service-board-deliverables li::before {
-  border-color: rgba(167, 206, 243, 0.72);
-  color: #a7cef3;
+  border-color: rgba(203, 182, 143, 0.66);
+  color: #d1b78d;
 }
 
 @media (max-width: 1200px) {
